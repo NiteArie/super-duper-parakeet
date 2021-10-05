@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICON CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
+    <link href="styles/cv.css" rel="stylesheet">
 </head>
+
 <body>
-    <main>
+    <main class="main">
         <div class="sidebar">
             <div class="sidebar__first">
                 <img class="sidebar__icon" src="assets/images/icon-logo.png">
             </div>
             <div class="sidebar__second">
-                <h1>CV Information</h1>
+                <h1 class="sidebar__heading">Thông tin</h1>
                 <form class="form">
-                    <label for="profile"></label>
-                    <input type="file" id="profile" name="profile">
-                    
+                    <!-- <label for="profile"></label>
+                    <input type="file" id="profile" name="profile"> -->
+
                     <div class="form__control form__control--split">
                         <div>
                             <label class="form__label" for="last-name">Họ</label>
@@ -40,14 +46,14 @@
                         <input class="form__input" type="date" id="dob" name="dob">
                     </div>
 
-                    <hr />
+                    <hr class="form__hr" />
 
                     <div class="form__control">
                         <label class="form__label" for="address">Địa chỉ</label>
                         <input class="form__input" type="text" id="address" name="address">
                     </div>
 
-                    <hr />
+                    <hr class="form__hr" />
 
                     <div class="form__control">
                         <label class="form__label" for="phone">Số điện thoại</label>
@@ -66,7 +72,8 @@
 
                         <div class="form__control">
                             <label class="form__label" for="social-network-heading">Tiêu đề</label>
-                            <input class="form__input" type="text" id="social-network-heading" name="social-network-heading">
+                            <input class="form__input" type="text" id="social-network-heading"
+                                name="social-network-heading">
                         </div>
 
                         <div class="form__items">
@@ -92,7 +99,8 @@
 
                         <div class="form-control">
                             <label class="form__label" for="objective-content">Nội dung</label>
-                            <textarea class="form__input form__input--area" id="objective-content" name="objective-content">
+                            <textarea class="form__input form__input--area" id="objective-content"
+                                name="objective-content">
 
                             </textarea>
                         </div>
@@ -105,7 +113,8 @@
 
                         <div class="form__control">
                             <label class="form__label" for="work-experience-heading">Tiêu đề</label>
-                            <input class="form__input" type="text" id="work-experience-heading" name="work-experience-heading">
+                            <input class="form__input" type="text" id="work-experience-heading"
+                                name="work-experience-heading">
                         </div>
 
                         <div class="form__items">
@@ -205,7 +214,300 @@
                 </form>
             </div>
         </div>
+        <div class="cv__wrapper">
+            <div class="cv">
+                <div class="cv__left">
+                    <div class="cv__profile">
+                        <img class="cv__profile-picture" src="assets/images/icon-logo.png">
+                    </div>
+
+                    <div class="cv__socials">
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/map-pin.svg">
+                            <p class="cv__social-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
+                                dapibus
+                                commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas justo est,
+                                sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue imperdiet.
+                                Vivamus
+                                ornare ullamcorper dolor sit amet dictum.
+                            </p>
+                        </div>
+
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/phone.svg">
+                            <p class="cv__social-content">
+                                +84 1234567890
+                            </p>
+                        </div>
+
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/mail.svg">
+                            <p class="cv__social-content">
+                                icon.acaclub@it.tdtu.edu.vn
+                            </p>
+                        </div>
+
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/calendar.svg">
+                            <p class="cv__social-content">
+                                01/01/1990
+                            </p>
+                        </div>
+
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/linkedin.svg">
+                            <p class="cv__social-content">
+                                Anonymous
+                            </p>
+                        </div>
+
+                        <div class="cv__social">
+                            <img class="cv__social-icon" src="assets/images/github.svg">
+                            <p class="cv__social-content">
+                                iconclub
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cv__awards">
+                        <h3 class="cv__awards-heading">
+                            Giải thưởng
+                        </h3>
+
+                        <div class="cv__award">
+                            <div class="cv__award-left">
+                                <p class="cv__award-title">
+                                    International Flutter Hackathon
+                                </p>
+                                <p class="cv__award-authority">
+                                    Google
+                                </p>
+                            </div>
+                            <p class="cv__award-time">January 2000</p>
+                        </div>
+
+                        <div class="cv__award">
+                            <div class="cv__award-left">
+                                <p class="cv__award-title">
+                                    International Angular Hackathon
+                                </p>
+                                <p class="cv__award-authority">
+                                    Google
+                                </p>
+                            </div>
+                            <p class="cv__award-time">January 2021</p>
+                        </div>
+                    </div>
+
+                    <div class="cv__certifications">
+                        <h3 class="cv__certifications-heading">
+                            Chứng chỉ
+                        </h3>
+
+                        <div class="cv__certification">
+                            <div class="cv__certification-left">
+                                <p class="cv__certification-title">
+                                    CCNA
+                                </p>
+                                <p class="cv__certification-authority">
+                                    Cisco Systems
+                                </p>
+                            </div>
+                            <p class="cv__certification-time">October 2000</p>
+                        </div>
+
+                        <div class="cv__certification">
+                            <div class="cv__certification-left">
+                                <p class="cv__certification-title">
+                                    DCUCI 642-999
+                                </p>
+                                <p class="cv__certification-authority">
+                                    Cisco Systems
+                                </p>
+                            </div>
+                            <p class="cv__certification-time">October 2001</p>
+                        </div>
+                    </div>
+                    <div class="cv__right">
+                        <div class="cv__hero">
+                            <p class="cv__hero-name">Anonymous</p>
+                            <p class="cv__hero-subtitle">Lập trình viên</p>
+
+                            <div class="cv__objective">
+                                <p class="cv__objective-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
+                                    dapibus
+                                    commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas justo
+                                    est,
+                                    sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue imperdiet.
+                                    Vivamus
+                                    ornare ullamcorper dolor sit amet dictum.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="cv__experiences">
+                            <h3 class="cv__experiences-heading">
+                                Kinh nghiệm làm việc
+                            </h3>
+
+                            <div class="cv__experience">
+                                <div class="cv__experience-head">
+                                    <div class="cv__experience-left">
+                                        <p class="cv__experience-company">On Point Electronics, NYC, NY</p>
+                                        <p class="cv__experience-role">Customer Service Representative</p>
+                                    </div>
+                                    <p class="cv__experience-range">(January 2013 - July 2018)</p>
+                                </div>
+                                <div class="cv__experience-body">
+                                    <ul>
+                                        <li>
+                                            Organized customer information and account data for business planning and
+                                            customer service purposes.
+                                        </li>
+                                        <li>
+                                            Created excel spreadsheets to track customer data and perform intense
+                                            reconciliation process.
+                                        </li>
+                                        <li>
+                                            Received 97% positive customer survey results.
+                                        </li>
+                                        <li>
+                                            Speed on calls was 10% above team average.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cv__experience">
+                                <div class="cv__experience-head">
+                                    <div class="cv__experience-left">
+                                        <p class="cv__experience-company">On Point Electronics, NYC, NY</p>
+                                        <p class="cv__experience-role">Customer Service Representative</p>
+                                    </div>
+                                    <p class="cv__experience-range">(January 2013 - July 2018)</p>
+                                </div>
+                                <div class="cv__experience-body">
+                                    <ul>
+                                        <li>
+                                            Organized customer information and account data for business planning and
+                                            customer service purposes.
+                                        </li>
+                                        <li>
+                                            Created excel spreadsheets to track customer data and perform intense
+                                            reconciliation process.
+                                        </li>
+                                        <li>
+                                            Received 97% positive customer survey results.
+                                        </li>
+                                        <li>
+                                            Speed on calls was 10% above team average.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cv__experience">
+                                <div class="cv__experience-head">
+                                    <div class="cv__experience-left">
+                                        <p class="cv__experience-company">On Point Electronics, NYC, NY</p>
+                                        <p class="cv__experience-role">Customer Service Representative</p>
+                                    </div>
+                                    <p class="cv__experience-range">(January 2013 - July 2018)</p>
+                                </div>
+                                <div class="cv__experience-body">
+                                    <ul>
+                                        <li>
+                                            Organized customer information and account data for business planning and
+                                            customer service purposes.
+                                        </li>
+                                        <li>
+                                            Created excel spreadsheets to track customer data and perform intense
+                                            reconciliation process.
+                                        </li>
+                                        <li>
+                                            Received 97% positive customer survey results.
+                                        </li>
+                                        <li>
+                                            Speed on calls was 10% above team average.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="cv__educations">
+                            <h3 class="cv__educations-heading">
+                                Giáo dục
+                            </h3>
+
+                            <div class="cv__education">
+                                <div class="cv__education-left">
+                                    <p class="cv__education-institution">University of California, Berkeley, CA</p>
+                                    <p class="cv__education-fos">Masters Computer Science</p>
+                                </div>
+                                <div class="cv__education-right">
+                                    <p class="cv__education-range">(September 2001 - August 2002)</p>
+                                    <p class="cv__education-gpa">8.0 CGPA</p>
+                                </div>
+                            </div>
+
+                            <div class="cv__education">
+                                <div class="cv__education-left">
+                                    <p class="cv__education-institution">University of California, Berkeley, CA</p>
+                                    <p class="cv__education-fos">Masters Computer Science</p>
+                                </div>
+                                <div class="cv__education-right">
+                                    <p class="cv__education-range">(September 2001 - August 2002)</p>
+                                    <p class="cv__education-gpa">8.0 CGPA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cv__projects">
+                            <h3 class="cv__projects-heading">
+                                Dự án
+                            </h3>
+
+                            <div class="cv__project">
+                                <div class="cv__project-head">
+                                    <div class="cv__project-left">
+                                        <p class="cv__project-title">Random Project</p>
+                                        <p class="cv__project-url">http://github.com/icon-club</p>
+                                    </div>
+                                    <p class="cv__project-range">(October 2001 - October 2003)</p>
+                                </div>
+                                <div class="cv__project-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
+                                    dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas
+                                    justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue
+                                    imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
+                                </div>
+                            </div>
+
+                            <div class="cv__project">
+                                <div class="cv__project-head">
+                                    <div class="cv__project-left">
+                                        <p class="cv__project-title">Random Project</p>
+                                        <p class="cv__project-url">http://github.com/icon-club</p>
+                                    </div>
+                                    <p class="cv__project-range">(October 2001 - October 2003)</p>
+                                </div>
+                                <div class="cv__project-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
+                                    dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas
+                                    justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue
+                                    imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
