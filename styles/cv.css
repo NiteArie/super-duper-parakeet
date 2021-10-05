@@ -53,7 +53,7 @@
 }
 
 .cv__awards-heading,
-.cv__certifications-heading,
+.cv__certificates-heading,
 .cv__experiences-heading,
 .cv__educations-heading,
 .cv__projects-heading
@@ -86,23 +86,23 @@
     font-size: 12px;
 }
 
-.cv__certification {
+.cv__certificate {
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cv__certification-title {
+.cv__certificate-title {
     font-weight: bold;
     font-size: 14px;
 }
 
-.cv__certification-authority {
+.cv__certificate-authority {
     font-size: 12px;
 }
 
-.cv__certification-time {
+.cv__certificate-time {
     font-size: 12px;
 }
 
@@ -125,7 +125,7 @@
 }
 
 .cv__objective-content {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .cv__experience + .cv__experience {
@@ -206,6 +206,6 @@
     font-size: 14px;
 }
 
-.cv__project-summary {
+.cv__project-body {
     font-size: 14px;
 }
