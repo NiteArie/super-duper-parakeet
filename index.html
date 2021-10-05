@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
+    <link href="styles/modal.css" rel="stylesheet">
+    <link href="styles/scrollbar.css" rel="stylesheet">
     <link href="styles/cv.css" rel="stylesheet">
 </head>
 
@@ -81,7 +83,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -100,7 +102,7 @@
                         <div class="form-control">
                             <label class="form__label" for="objective-content">Nội dung</label>
                             <textarea class="form__input form__input--area" id="objective-content"
-                                name="objective-content">
+                                name="objective-content" rows="5">
 
                             </textarea>
                         </div>
@@ -108,7 +110,7 @@
 
                     <div class="form__section">
                         <h2 class="form__subheading">
-                            Kinh nghiệm việc làm
+                            Kinh nghiệm làm việc
                         </h2>
 
                         <div class="form__control">
@@ -122,7 +124,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -143,7 +145,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -164,7 +166,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -185,7 +187,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -206,7 +208,7 @@
                         </div>
 
                         <div class="form__section-actions">
-                            <button class="form__section-add">
+                            <button class="form__section-add" type="button">
                                 Thêm
                             </button>
                         </div>
@@ -224,7 +226,7 @@
                     <div class="cv__socials">
                         <div class="cv__social">
                             <img class="cv__social-icon" src="assets/images/map-pin.svg">
-                            <p class="cv__social-content">
+                            <p class="cv__social-content" id="js-address">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
                                 dapibus
                             </p>
@@ -232,21 +234,21 @@
 
                         <div class="cv__social">
                             <img class="cv__social-icon" src="assets/images/phone.svg">
-                            <p class="cv__social-content">
+                            <p class="cv__social-content" id="js-phone">
                                 +84 1234567890
                             </p>
                         </div>
 
                         <div class="cv__social">
                             <img class="cv__social-icon" src="assets/images/mail.svg">
-                            <p class="cv__social-content">
+                            <p class="cv__social-content" id="js-email">
                                 icon.acaclub@it.tdtu.edu.vn
                             </p>
                         </div>
 
                         <div class="cv__social">
                             <img class="cv__social-icon" src="assets/images/calendar.svg">
-                            <p class="cv__social-content">
+                            <p class="cv__social-content" id="js-dob">
                                 01/01/1990
                             </p>
                         </div>
@@ -267,7 +269,7 @@
                     </div>
 
                     <div class="cv__awards">
-                        <h3 class="cv__awards-heading">
+                        <h3 class="cv__awards-heading" id="js-award-heading">
                             Giải thưởng
                         </h3>
 
@@ -297,7 +299,7 @@
                     </div>
 
                     <div class="cv__certifications">
-                        <h3 class="cv__certifications-heading">
+                        <h3 class="cv__certifications-heading" id="js-certificate-heading">
                             Chứng chỉ
                         </h3>
 
@@ -329,11 +331,14 @@
                 </div>
                 <div class="cv__right">
                     <div class="cv__hero">
-                        <h2 class="cv__hero-name">Anonymous</h2>
-                        <p class="cv__hero-subtitle">Lập trình viên</p>
+                        <h2 class="cv__hero-name">
+                            <span class="cv__hero-last" id="js-last">Doe</span>
+                            <span class="cv__hero-first" id="js-first">John</span>
+                        </h2>
+                        <p class="cv__hero-subtitle" id="js-subtitle">Lập trình viên</p>
 
                         <div class="cv__objective">
-                            <p class="cv__objective-content">
+                            <p class="cv__objective-content" id="js-objective-content">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
                                 dapibus
                                 commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas justo
@@ -346,7 +351,7 @@
                     </div>
 
                     <div class="cv__experiences">
-                        <h3 class="cv__experiences-heading">
+                        <h3 class="cv__experiences-heading" id="js-work-experience-heading">
                             Kinh nghiệm làm việc
                         </h3>
 
@@ -437,7 +442,7 @@
                     </div>
 
                     <div class="cv__educations">
-                        <h3 class="cv__educations-heading">
+                        <h3 class="cv__educations-heading" id="js-education-heading">
                             Giáo dục
                         </h3>
 
@@ -465,7 +470,7 @@
                     </div>
 
                     <div class="cv__projects">
-                        <h3 class="cv__projects-heading">
+                        <h3 class="cv__projects-heading" id="js-project-heading">
                             Dự án
                         </h3>
 
@@ -508,7 +513,216 @@
                 </div>
             </div>
     </main>
-    <script src="scripts/index.js"></script>
+
+    <div class="modal" id="social-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Mạng xã hội</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="social-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="social-network-type">Loại</label>
+                    <input class="form__input" type="text" id="social-network-type" name="social-network-type" required>
+                    <p class="form__note">Loại mạng xã hội chỉ có thể dùng Twitter, Linkedin, Instagram hoặc
+                        Github</p>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="social-network-username">Tên tài khoản</label>
+                    <input class="form__input" type="text" id="social-network-type" name="social-network-username"
+                        required>
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="experience-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Kinh nghiệm làm việc</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="experience-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="experience-company">Tên công ty</label>
+                    <input class="form__input" type="text" id="experience-company" name="experience-company" required>
+                </div>
+                <div class="form__control form__control--split">
+                    <div>
+                        <label class="form__label form__label--required" for="experience-role">Vị trí</label>
+                        <input class="form__input" type="text" id="experience-role" name="experience-role" required>
+                    </div>
+                    <div>
+                        <label class="form__label" for="experience-company-website">Web công ty</label>
+                        <input class="form__input" type="text" id="experience-company-website"
+                            name="experience-company-website">
+                    </div>
+                </div>
+                <div class="form__control form__control--split">
+                    <div>
+                        <label class="form__label form__label--required" for="experience-start-date">Ngày bắt
+                            đầu</label>
+                        <input class="form__input" type="date" id="experience-start-date" name="experience-start-date"
+                            required>
+                    </div>
+                    <div>
+                        <label class="form__label" for="experience-end-date">Ngày kết thúc</label>
+                        <input class="form__input" type="date" id="experience-end-date" name="experience-end-date">
+                    </div>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="experience-summary">Mô tả</label>
+                    <textarea class="form__input" id="experience-summary" name="experience-summary" rows="5"></textarea>
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="education-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Giáo dục</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="education-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="education-institution">Nơi giáo dục</label>
+                    <input class="form__input" type="text" id="education-institution" name="education-institution"
+                        required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="education-fos">Lĩnh vực giáo dục</label>
+                    <input class="form__input" type="text" id="education-fos" name="education-fos" required>
+                </div>
+                <div class="form__control form__control--split">
+                    <div>
+                        <label class="form__label" for="education-degree-type">Loại bằng</label>
+                        <input class="form__input" type="text" id="education-degree-type" name="education-degree-type">
+                    </div>
+                    <div>
+                        <label class="form__label" for="education-gpa">GPA</label>
+                        <input class="form__input" type="text" id="education-gpa" name="education-gpa">
+                    </div>
+                </div>
+                <div class="form__control form__control--split">
+                    <div>
+                        <label class="form__label form__label--required" for="education-start-date">Ngày bắt
+                            đầu</label>
+                        <input class="form__input" type="date" id="education-start-date" name="education-start-date"
+                            required>
+                    </div>
+                    <div>
+                        <label class="form__label" for="education-end-date">Ngày kết thúc</label>
+                        <input class="form__input" type="date" id="education-end-date" name="education-end-date">
+                    </div>
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="project-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Dự án</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="project-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="project-title">Tên dự án</label>
+                    <input class="form__input" type="text" id="project-title" name="project-title" required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="project-website">Web dự án</label>
+                    <input class="form__input" type="text" id="project-website" name="project-website">
+                </div>
+                <div class="form__control form__control--split">
+                    <div>
+                        <label class="form__label form__label--required" for="project-start-date">Ngày bắt
+                            đầu</label>
+                        <input class="form__input" type="date" id="project-start-date" name="project-start-date"
+                            required>
+                    </div>
+                    <div>
+                        <label class="form__label" for="project-end-date">Ngày kết thúc</label>
+                        <input class="form__input" type="date" id="project-end-date" name="project-end-date">
+                    </div>
+                </div>
+                <div class="form__control">
+                    <label class="form__label" for="project-summary">Mô tả</label>
+                    <textarea class="form__input" id="project-summary" name="project-summary" rows="5"></textarea>
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="award-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Giải thưởng</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="award-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="award-name">Tên giải thưởng</label>
+                    <input class="form__input" type="text" id="award-name" name="award-name" required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="award-authority">Tổ chức trao giải</label>
+                    <input class="form__input" type="text" id="award-authority" name="award-authority" required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="award-date">Ngày trao giải</label>
+                    <input class="form__input" type="date" id="award-date" name="award-date">
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="certificate-modal">
+        <div class="modal__body">
+            <div class="modal__heading">
+                <p class="modal__heading-title">Chứng chỉ</p>
+                <p class="modal__close">&times;</p>
+            </div>
+            <form class="form" id="certificate-form">
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="certificate-name">Tên chứng chỉ</label>
+                    <input class="form__input" type="text" id="certificate-name" name="certificate-name" required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="certificate-authority">Tổ chức trao
+                        chứng chỉ</label>
+                    <input class="form__input" type="text" id="certificate-authority" name="certificate-authority"
+                        required>
+                </div>
+                <div class="form__control">
+                    <label class="form__label form__label--required" for="certificate-date">Ngày trao chứng chỉ</label>
+                    <input class="form__input" type="date" id="certificate-date" name="certificate-date">
+                </div>
+                <div class="form__actions">
+                    <button class="form__submit" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/index.js">
+    </script>
 </body>
 
 </html>
