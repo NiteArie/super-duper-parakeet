@@ -11,6 +11,7 @@ body {
     --whiteText: hsl(0, 0%, 96%);
     --labelColor: hsl(0, 0%, 74%);
     --formInputBG: hsl(0, 0%, 26%);
+    --formItemBorder: hsl(220, 13%, 51%);
     --sidebarBG: hsl(0, 0%, 13%);
     --cvTheme: hsl(174, 100%, 29%);
     --cvHeroColor: hsl(0, 0%, 96%);
@@ -122,6 +123,7 @@ body {
     padding: 0.5rem 1rem;
     border: 1px solid var(--whiteText);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .form__actions {
@@ -146,4 +148,37 @@ body {
     margin-top: 0.5rem;
     color: var(--labelColor);
     font-size: 13px;
+}
+
+.form__items {
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--formItemBorder);
+    border-radius: 4px;
+}
+
+.form__item {
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__item + .form__item {
+    border-top: 1px solid var(--formItemBorder);
+}
+
+.form__item-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form__item-subtitle {
+    margin-top: 0.5rem;
+    font-size: 12px;
+}
+
+.form__item-remove {
+    font-size: 1.5rem;
+    color: var(--whiteText);
+    cursor: pointer;
 }
