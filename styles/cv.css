@@ -180,6 +180,7 @@
 
 .cv__education-gpa {
     font-size: 14px;
+    text-align: right;
 }
 
 .cv__project + .cv__project {
