@@ -517,6 +517,29 @@ const BUILDERS = (() => {
 
 (() => {
 
+    const profilePictureInput = document.getElementById("profile-picture");
+    const profilePictureURLInput = document.getElementById("profile-picture-external");
+    const profilePictureElement = document.getElementById("js-profile-picture");
+
+    profilePictureInput.addEventListener("change", (event) => {
+        
+        Array.from(event.target.files).forEach((file) => {
+            if (!file.type.startsWith("image/")) {
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                profilePictureElement.src = event.target.result;
+            }
+            reader.readAsDataURL(file);
+        })
+    })
+
+    profilePictureURLInput.addEventListener("input", (event) => {
+        profilePictureElement.src = event.target.value;
+    })
+
     const lastNameInput = document.getElementById("last-name");
     const lastNameElement = document.getElementById("js-last");
 

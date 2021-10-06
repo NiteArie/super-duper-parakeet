@@ -82,6 +82,16 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.form__control--side {
+    display: flex;
+    align-items: center;
+}
+
+.form__control--left {
+    width: 100%;
+    margin-left: 1rem;
+}
+
 .form__control--split {
     display: flex;
 }
@@ -103,11 +113,23 @@ body {
     margin-bottom: 4px;
 }
 
-
 .form__label--required::after {
     content: "*";
     color: var(--labelRequiredColor);
 }
+
+.form__label--file {
+    display: flex;
+    /* width: 60px;
+    height: 60px; */
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--formInputBG);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 .form__input {
     width: 100%;

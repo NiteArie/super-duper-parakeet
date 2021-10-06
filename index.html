@@ -33,8 +33,17 @@
                     </button>
                 </div>
                 <form class="form">
-                    <!-- <label for="profile"></label>
-                    <input type="file" id="profile" name="profile"> -->
+                    <div class="form__control form__control--side">
+                        <label class="form__label--file" for="profile-picture">
+                            <img src="assets/images/upload.svg">
+                        </label>
+                        <input class="form__file" type="file" id="profile-picture" name="profile-picture" hidden>
+                        <div class="form__control--left">
+                            <label class="form__label" for="profile-picture-external">Đường dẫn ảnh</label>
+                            <input class="form__input" type="text" id="profile-picture-external"
+                                name="profile-picture-external">
+                        </div>
+                    </div>
 
                     <div class="form__control form__control--split">
                         <div>
@@ -234,7 +243,7 @@
             <div class="cv" id="cv">
                 <div class="cv__left">
                     <div class="cv__profile">
-                        <img class="cv__profile-picture" src="assets/images/icon-logo.png">
+                        <img class="cv__profile-picture" id="js-profile-picture" src="assets/images/icon-logo.png">
                     </div>
 
                     <div class="cv__socials" id="js-socials">
@@ -780,8 +789,6 @@
         </div>
     </div>
 
-    <script src="scripts/OpenSans-Regular-normal.js"></script>
-    <script src="scripts/OpenSans-Bold-normal.js"></script>
     <script src="scripts/index.js">
     </script>
 </body>
