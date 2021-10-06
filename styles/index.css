@@ -167,6 +167,10 @@ body {
     font-size: 13px;
 }
 
+.form__note-link {
+    text-decoration: none;
+}
+
 .form__items {
     margin-bottom: 1.5rem;
     border: 1px solid var(--formItemBorder);
