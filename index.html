@@ -15,6 +15,8 @@
     <link href="styles/cv.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.3.2/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,12 @@
                 <img class="sidebar__icon" src="assets/images/icon-logo.png">
             </div>
             <div class="sidebar__second">
-                <h1 class="sidebar__heading">Thông tin</h1>
+                <div class="sidebar__heading">
+                    <h1 class="sidebar__headline">Thông tin</h1>
+                    <button class="sidebar__heading-button" id="js-download-pdf">
+                        <img class="sidebar__heading-icon" src="assets/images/download.svg">
+                    </button>
+                </div>
                 <form class="form">
                     <!-- <label for="profile"></label>
                     <input type="file" id="profile" name="profile"> -->
@@ -225,7 +232,7 @@
             </div>
         </div>
         <div class="cv__wrapper">
-            <div class="cv">
+            <div class="cv" id="cv">
                 <div class="cv__left">
                     <div class="cv__profile">
                         <img class="cv__profile-picture" src="assets/images/icon-logo.png">
@@ -438,81 +445,113 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div> -->
-
-                    </div>
-
-                    <div class="cv__educations" id="js-educations">
-                        <h3 class="cv__educations-heading" id="js-education-heading">
-                            Giáo dục
-                        </h3>
-
-                        <!-- <div class="cv__education">
-                            <div class="cv__education-left">
-                                <p class="cv__education-institution">University of California, Berkeley, CA</p>
-                                <p class="cv__education-fos">Masters Computer Science</p>
-                            </div>
-                            <div class="cv__education-right">
-                                <p class="cv__education-range">(September 2001 - August 2002)</p>
-                                <p class="cv__education-gpa">8.0 CGPA</p>
-                            </div>
                         </div>
 
-                        <div class="cv__education">
-                            <div class="cv__education-left">
-                                <p class="cv__education-institution">University of California, Berkeley, CA</p>
-                                <p class="cv__education-fos">Masters Computer Science</p>
+                        <div class="cv__experience">
+                            <div class="cv__experience-head">
+                                <div class="cv__experience-left">
+                                    <p class="cv__experience-company">On Point Electronics, NYC, NY</p>
+                                    <p class="cv__experience-role">Customer Service Representative</p>
+                                </div>
+                                <p class="cv__experience-range">(January 2013 - July 2018)</p>
                             </div>
-                            <div class="cv__education-right">
-                                <p class="cv__education-range">(September 2001 - August 2002)</p>
-                                <p class="cv__education-gpa">8.0 CGPA</p>
+                            <div class="cv__experience-body">
+                                <ul>
+                                    <li>
+                                        Organized customer information and account data for business planning and
+                                        customer service purposes.
+                                    </li>
+                                    <li>
+                                        Created excel spreadsheets to track customer data and perform intense
+                                        reconciliation process.
+                                    </li>
+                                    <li>
+                                        Received 97% positive customer survey results.
+                                    </li>
+                                    <li>
+                                        Speed on calls was 10% above team average.
+                                    </li>
+                                </ul>
                             </div>
                         </div> -->
-                    </div>
 
-                    <div class="cv__projects" id="js-projects">
-                        <h3 class="cv__projects-heading" id="js-project-heading">
-                            Dự án
-                        </h3>
+                        <div class="cv__educations" id="js-educations">
+                            <h3 class="cv__educations-heading" id="js-education-heading">
+                                Giáo dục
+                            </h3>
 
-                        <!-- <div class="cv__project">
-                            <div class="cv__project-head">
-                                <div class="cv__project-left">
-                                    <p class="cv__project-title">Random Project</p>
-                                    <p class="cv__project-url">http://github.com/icon-club</p>
+                            <!-- <div class="cv__education">
+                                <div class="cv__education-left">
+                                    <p class="cv__education-institution">University of California, Berkeley, CA</p>
+                                    <p class="cv__education-fos">Masters Computer Science</p>
                                 </div>
-                                <p class="cv__project-range">(October 2001 - October 2003)</p>
+                                <div class="cv__education-right">
+                                    <p class="cv__education-range">(September 2001 - August 2002)</p>
+                                    <p class="cv__education-gpa">8.0 CGPA</p>
+                                </div>
                             </div>
-                            <div class="cv__project-body">
-                                <p class="cv__project-summary">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
-                                    dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas
-                                    justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue
-                                    imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
-                                </p>
-                            </div>
+
+                            <div class="cv__education">
+                                <div class="cv__education-left">
+                                    <p class="cv__education-institution">University of California, Berkeley, CA</p>
+                                    <p class="cv__education-fos">Masters Computer Science</p>
+                                </div>
+                                <div class="cv__education-right">
+                                    <p class="cv__education-range">(September 2001 - August 2002)</p>
+                                    <p class="cv__education-gpa">8.0 CGPA</p>
+                                </div>
+                            </div> -->
                         </div>
 
-                        <div class="cv__project">
-                            <div class="cv__project-head">
-                                <div class="cv__project-left">
-                                    <p class="cv__project-title">Random Project</p>
-                                    <p class="cv__project-url">http://github.com/icon-club</p>
+                        <div class="cv__projects" id="js-projects">
+                            <h3 class="cv__projects-heading" id="js-project-heading">
+                                Dự án
+                            </h3>
+
+                            <!-- <div class="cv__project">
+                                <div class="cv__project-head">
+                                    <div class="cv__project-left">
+                                        <p class="cv__project-title">Random Project</p>
+                                        <p class="cv__project-url">http://github.com/icon-club</p>
+                                    </div>
+                                    <p class="cv__project-range">(October 2001 - October 2003)</p>
                                 </div>
-                                <p class="cv__project-range">(October 2001 - October 2003)</p>
+                                <div class="cv__project-body">
+                                    <p class="cv__project-summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget
+                                        nisl
+                                        dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim.
+                                        Maecenas
+                                        justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium
+                                        congue
+                                        imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="cv__project-body">
-                                <p class="cv__project-summary">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget nisl
-                                    dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim. Maecenas
-                                    justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium congue
-                                    imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
-                                </p>
-                            </div>
-                        </div> -->
+
+                            <div class="cv__project">
+                                <div class="cv__project-head">
+                                    <div class="cv__project-left">
+                                        <p class="cv__project-title">Random Project</p>
+                                        <p class="cv__project-url">http://github.com/icon-club</p>
+                                    </div>
+                                    <p class="cv__project-range">(October 2001 - October 2003)</p>
+                                </div>
+                                <div class="cv__project-body">
+                                    <p class="cv__project-summary">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nunc eget
+                                        nisl
+                                        dapibus commodo a et augue. Quisque pulvinar tristique odio in dignissim.
+                                        Maecenas
+                                        justo est, sagittis molestie neque a, scelerisque dictum dolor. Sed pretium
+                                        congue
+                                        imperdiet. Vivamus ornare ullamcorper dolor sit amet dictum.
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
     </main>
 
     <div class="modal" id="js-social-modal">
@@ -734,6 +773,8 @@
         </div>
     </div>
 
+    <script src="scripts/OpenSans-Regular-normal.js"></script>
+    <script src="scripts/OpenSans-Bold-normal.js"></script>
     <script src="scripts/index.js">
     </script>
 </body>

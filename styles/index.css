@@ -48,9 +48,26 @@ body {
 }
 
 .sidebar__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__headline {
     color: var(--whiteText);
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.sidebar__heading-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.sidebar__heading-icon {
+    width: 20px;
+    height: auto;
 }
 
 .form {
