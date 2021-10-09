@@ -1,4 +1,19 @@
 (() => {
+    const formHeadingElements = document.querySelectorAll(".form__subheading");
+
+    Array.from(formHeadingElements).forEach((formHeadingElement) => {
+        formHeadingElement.addEventListener("click", (event) => {
+            const formContentContainer = formHeadingElement.nextElementSibling;
+
+            formContentContainer.classList.toggle("form__content--show");
+        })
+    })
+})();
+
+
+
+
+(() => {
 
     const closeModalButtons = document.querySelectorAll(".modal__close");
 

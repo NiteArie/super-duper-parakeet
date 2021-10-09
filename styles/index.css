@@ -24,8 +24,8 @@ body {
 
 .sidebar {
     width: 30%;
-    /* height: 100vh;
-    overflow-y: scroll; */
+    height: 100vh;
+    overflow-y: scroll;
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -76,6 +76,14 @@ body {
 
 .form__hr {
     margin-bottom: 1.5rem;
+}
+
+.form__content {
+    display: none;
+}
+
+.form__content--show {
+    display: block;
 }
 
 .form__control {
@@ -142,9 +150,12 @@ body {
 }
 
 .form__subheading {
+    padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid var(--labelColor);
     text-transform: uppercase;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .form__section {
